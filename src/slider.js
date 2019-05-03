@@ -58,25 +58,7 @@ export default class Slider extends Component {
     this.setState({ images: images });
   };
 
-  renderNavigation = () => {
-    return (
-      <div className="slider-arrows">
-        <button className="arrow left" onClick={() => this.slideLeft()}>
-          <img alt="left-arrow" src={require("./img/arrow-left.png")} />
-        </button>
-        <button className="arrow right" onClick={() => this.slideRight()}>
-          <img alt="right-arrow" src={require("./img/arrow-right.png")} />
-        </button>
-      </div>
-    );
-  };
-
   render() {
-    return (
-      <div className="slider">
-        {this.renderNavigation()}
-        {this.renderSlides()}
-      </div>
-    );
+    return <div className="slider">{this.renderSlides()}</div>;
   }
 }
